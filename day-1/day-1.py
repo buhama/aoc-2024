@@ -17,7 +17,7 @@ for i in range(len(sortedLeftList)):
     difference = abs(sortedRightList[i] - sortedLeftList[i])
     differences.append(difference)
 
-print(sum(differences))
+print(sum(differences)) # 1765812
 
 # part 2
 
@@ -29,4 +29,4 @@ similarity_score = 0
 for num in leftList:
     similarity_score += find_num_of_occurrences(num) * num
 
-print(similarity_score)
+print(similarity_score) #20520794
