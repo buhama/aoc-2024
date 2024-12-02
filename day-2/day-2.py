@@ -1,6 +1,6 @@
 safe_levels = 0
 
-def is_safe_part_1(line_numbers):
+def is_safe_part_1(line_numbers): # 639
     order = 'none'
     if int(line_numbers[0]) < int(line_numbers[1]):
         order = 'ascending'
@@ -41,7 +41,7 @@ def check_after_removing(line_numbers, index):
             return True
     return False
 
-def is_safe_part_2(line_numbers, allow_removing_numbers=False):
+def is_safe_part_2(line_numbers, allow_removing_numbers=False): # 674
     order = 'none'
     if int(line_numbers[0]) < int(line_numbers[1]):
         order = 'ascending'
@@ -75,7 +75,8 @@ def is_safe_part_2(line_numbers, allow_removing_numbers=False):
 with open("input.txt", "r") as file:
     for line in file:
         line_numbers = line.split()
-        if is_safe_part_2(line_numbers, True):
+
+        if is_safe_part_2(line_numbers, False):
             safe_levels += 1
 
 print(f"\nFinal safe levels: {safe_levels}")
